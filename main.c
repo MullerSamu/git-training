@@ -9,8 +9,16 @@ typedef struct {
 
 
 int main() {
-	printf("Hello Git - A es B verzio!\n");
-	return 0;
+    int n;
+    printf("n=");
+    scanf("%i", &n);
+    double celsius[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &celsius[i);
+    }
+    HOMERSEKLET ho = analyze_temperatures(celsius, n);
+    printf("Atlag: %d\nMin: %d\nMax: %d\n " ho.average, ho.min_temp, ho.max_temp);
+    return 0;
 }
 
 
