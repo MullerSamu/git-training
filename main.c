@@ -1,5 +1,4 @@
 #include <stdio.h>
-HOMERSEKLET analyze_temperatures(double *celsius_data, int count);
 
 typedef struct {
     double min_temp;
@@ -7,6 +6,7 @@ typedef struct {
     double average;
 }HOMERSEKLET;
 
+HOMERSEKLET analyze_temperatures(double *celsius_data, int count);
 
 int main() {
     int n;
@@ -14,10 +14,11 @@ int main() {
     scanf("%i", &n);
     double celsius[n];
     for (int i = 0; i < n; i++) {
-        scanf("%d", &celsius[i);
+        scanf("%lf", &celsius[i]);
     }
     HOMERSEKLET ho = analyze_temperatures(celsius, n);
-    printf("Atlag: %d\nMin: %d\nMax: %d\n " ho.average, ho.min_temp, ho.max_temp);
+    printf("Atlag: %lf\nMin: %lf\nMax: %lf\n " ,ho.average, ho.min_temp, ho.max_temp);
+    
     return 0;
 }
 
@@ -34,7 +35,7 @@ HOMERSEKLET analyze_temperatures(double *celsius_data, int count) {
     // Kiszűrjük a hibás hosszúságot
     if (count <= 0) {
         printf("Nincs elem a tombben.\n");
-        return;
+       
     }
 
     // Túlcsordulás elleni védelem a lokális tömb miatt
